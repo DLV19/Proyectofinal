@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Enlaces Interactiva</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #E8DAEF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #a3e4d7;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .container ul li {
+      margin: 10px 0;
+    }
+
+    .my-link {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+    }
+
+    .my-link:hover {
+      color: #0056b3;
+      border-bottom: 2px solid #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li><a href="https://drive.google.com/file/d/1wI55SpKisuUh1lPpx8qsSd0VUWBYm74X/view?usp=sharing"class="my-link">Reporte de modificaciones</a></li>
+  </div>
+
+  <script>
+    // Obtenemos todos los elementos de enlace dentro de la lista
+    var links = document.querySelectorAll('.my-link');
+
+    // Iteramos sobre cada enlace y agregamos eventos a cada uno
+    links.forEach(function(link) {
+      link.addEventListener('mouseover', function() {
+        link.style.color = '#ff6600'; // Cambiamos el color del texto al pasar el ratón
+      });
+
+      link.addEventListener('mouseout', function() {
+        link.style.color = '#007bff'; // Restauramos el color original al sacar el ratón
+      });
+    });
+  </script>
+</body>
+</html>
